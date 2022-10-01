@@ -3,6 +3,7 @@
 Este projeto representa um sistema que gerencia documentos para arquivos deslizantes. Principais funcionaidades do sistema:
 
 • Cadastro e administração de usuários;
+
 • Cadastro e gerência de tipos documentais;
 • Cadastro e gerência de documentos;
 • Impressão de etiquetas para caixas do arquivo;
