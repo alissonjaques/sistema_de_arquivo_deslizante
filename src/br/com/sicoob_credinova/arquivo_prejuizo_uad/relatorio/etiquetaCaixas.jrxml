@@ -6,13 +6,13 @@
 	<parameter name="inicio" class="java.lang.String"/>
 	<parameter name="fim" class="java.lang.String"/>
 	<queryString language="SQL">
-		<![CDATA[SELECT credinova_arquivo_prejuizo.caixa.id_caixa,
-	credinova_arquivo_prejuizo.caixa.rua,
-	credinova_arquivo_prejuizo.caixa.avenida,
-	credinova_arquivo_prejuizo.caixa.predio,
-	credinova_arquivo_prejuizo.caixa.andar,
-	credinova_arquivo_prejuizo.caixa.apartamento
-FROM credinova_arquivo_prejuizo.caixa
+		<![CDATA[SELECT arquivo_deslizante.caixa.id_caixa,
+	arquivo_deslizante.caixa.rua,
+	arquivo_deslizante.caixa.avenida,
+	arquivo_deslizante.caixa.predio,
+	arquivo_deslizante.caixa.andar,
+	arquivo_deslizante.caixa.apartamento
+FROM arquivo_deslizante.caixa
 WHERE id_caixa BETWEEN $P{inicio} and $P{fim}]]>
 	</queryString>
 	<field name="id_caixa" class="java.lang.Integer">

@@ -2,7 +2,7 @@ package br.com.sicoob_credinova.arquivo_prejuizo_uad.view.login;
 
 import br.com.sicoob_credinova.arquivo_prejuizo_uad.controller.UsuarioController;
 import br.com.sicoob_credinova.arquivo_prejuizo_uad.model.UsuarioArquivo;
-import br.com.sicoob_credinova.arquivo_prejuizo_uad.utils.BibliotecaArquivoPrejuizo;
+import br.com.sicoob_credinova.arquivo_prejuizo_uad.utils.BibliotecaArquivoDeslizante;
 import br.com.sicoob_credinova.arquivo_prejuizo_uad.view.principal.TelaPrincipal;
 import javax.swing.JOptionPane;
 
@@ -178,7 +178,7 @@ public class TelaDeLogin extends javax.swing.JDialog { // declaração da classe
             }
             
             getTp().getJmiLogin().setEnabled(false);
-            BibliotecaArquivoPrejuizo.copiaUsuario(getUsuarioLogado(), usuario);
+            BibliotecaArquivoDeslizante.copiaUsuario(getUsuarioLogado(), usuario);
 
             dispose();
         } else {

@@ -56,7 +56,7 @@ public class ValoresDosCamposDAO {
                 pstm.setString(2, valoresDosCampos.getValor2());
                 pstm.setString(3, valoresDosCampos.getValor3());
                 pstm.setString(4, valoresDosCampos.getValor4());
-                pstm.setString(5, valoresDosCampos.getValor4());
+                pstm.setString(5, valoresDosCampos.getValor5());
                 pstm.setString(6, valoresDosCampos.getValor6());
                 pstm.setString(7, valoresDosCampos.getValor7());
                 pstm.setInt(8, valoresDosCampos.getId_valores_dos_campos());

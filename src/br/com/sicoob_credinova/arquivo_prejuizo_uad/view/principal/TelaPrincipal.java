@@ -83,7 +83,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jmiEditarExcluir = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Arquivo Prejuízo 1.0.0");
+        setTitle("Sistema de Gerência de Documentos para Arquivos Deslizantes - Versão: 1.0.0");
         setBackground(new java.awt.Color(0, 128, 128));
 
         jdpPrincipal.setBackground(new java.awt.Color(255, 255, 255));

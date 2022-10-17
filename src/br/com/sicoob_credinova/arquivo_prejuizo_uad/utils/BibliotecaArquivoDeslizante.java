@@ -8,7 +8,7 @@ import br.com.sicoob_credinova.arquivo_prejuizo_uad.model.UsuarioArquivo;
  *
  * @author Alisson Jaques
  */
-public class BibliotecaArquivoPrejuizo {
+public class BibliotecaArquivoDeslizante {
     public static boolean preencherCaixasNoArquivo(){
         CaixaController controle = new CaixaController();
         controle.deletarTodos();
