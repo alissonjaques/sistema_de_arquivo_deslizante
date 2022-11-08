@@ -17,7 +17,7 @@ public class EdicaoExclusaoTipoDocumental extends javax.swing.JInternalFrame {
      * Creates new form CadastroTipoDocumental
      */
     public EdicaoExclusaoTipoDocumental() {
-        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\faviconP.png"));
+        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\arquivo.png"));
         initComponents();
         controle = new NomeDosCamposController();
     }

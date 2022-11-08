@@ -20,7 +20,7 @@ public class AdministrarUsuarios extends javax.swing.JInternalFrame {
      * Creates new form AdministrarUsuarios
      */
     public AdministrarUsuarios() {
-        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\faviconP.png"));
+        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\arquivo.png"));
         initComponents();
         controle = new UsuarioController();
         usuarios = controle.selecionarTodos();

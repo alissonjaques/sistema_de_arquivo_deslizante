@@ -15,7 +15,7 @@ public class DetalhesDocumento extends javax.swing.JFrame {
      * @param documento o documento a ser apresentado na tela
      */
     public DetalhesDocumento(String documento) {
-        this.setIconImage(Toolkit.getDefaultToolkit().getImage("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\faviconP.png"));
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\arquivo.png"));
         initComponents();
         this.documento = documento;
         preencheDados();

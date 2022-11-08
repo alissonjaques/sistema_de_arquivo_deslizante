@@ -1,4 +1,6 @@
+CREATE SCHEMA arquivo_deslizante;
 CREATE TABLE `caixa` (
+import React from 'react';function ListaDeRepositorios() {  return (   <ul>    <li>Curso da Alura - HTML e CSS</li>    <li>Curso da Alura - React</li>    <li>Curso da Alura - Manipulando DOM com JS</li>   </ul>  );}export default ListaDeRepositorios;
   `id_caixa` int(11) NOT NULL,
   `rua` int(11) NOT NULL,
   `avenida` int(11) NOT NULL,

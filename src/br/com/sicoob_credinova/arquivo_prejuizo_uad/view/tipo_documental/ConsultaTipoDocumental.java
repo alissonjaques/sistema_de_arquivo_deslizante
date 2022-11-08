@@ -21,7 +21,7 @@ public class ConsultaTipoDocumental extends javax.swing.JInternalFrame {
      * Creates new form ConsultaTipoDocumental
      */
     public ConsultaTipoDocumental() {
-        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\faviconP.png"));
+        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\arquivo.png"));
         initComponents();
         controle = new NomeDosCamposController();
         lista = new ArrayList();

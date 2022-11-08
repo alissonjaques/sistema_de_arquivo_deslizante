@@ -37,7 +37,7 @@ public class CadastroDeDocumentos extends javax.swing.JInternalFrame {
      * @param usuario o usuário logado no sistema
      */
     public CadastroDeDocumentos(UsuarioArquivo usuario) {
-        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\faviconP.png"));
+        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\arquivo.png"));
         initComponents();
         controleNomeDosCampos = new NomeDosCamposController();
         controleDocumento = new DocumentoController();

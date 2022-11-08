@@ -25,7 +25,7 @@ public class ConsultaDeDocumentos extends javax.swing.JInternalFrame {
      * Creates new form ConsultaDeDocumentos
      */
     public ConsultaDeDocumentos() {
-        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\faviconP.png"));
+        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\arquivo.png"));
         initComponents();
         controleNomeDosCampos = new NomeDosCamposController();
         documentoController = new DocumentoController();

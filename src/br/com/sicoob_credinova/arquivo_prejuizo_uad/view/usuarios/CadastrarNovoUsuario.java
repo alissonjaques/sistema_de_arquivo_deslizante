@@ -21,7 +21,7 @@ public class CadastrarNovoUsuario extends javax.swing.JFrame {
      * @param administrarUsuarios
      */
     public CadastrarNovoUsuario(AdministrarUsuarios administrarUsuarios) {
-        this.setIconImage(Toolkit.getDefaultToolkit().getImage("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\faviconP.png"));
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\arquivo.png"));
         initComponents();
         this.administrarUsuarios = administrarUsuarios;
     }

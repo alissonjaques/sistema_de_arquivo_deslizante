@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="etiquetaCaixas" columnCount="2" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="277" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="aba1c95a-7b4a-4d8b-a4c4-deafce7162e4">
-	<property name="com.jaspersoft.studio.data.sql.tables" value="Y3JlZGlub3ZhX2FycXVpdm9fcHJlanVpem8uY2FpeGEgQVMgLDU1LDU0LGU3YzYyNTBlLTI0YzIt&#xA;NGI2NS1iMTFiLTdiZDI1ZTY5YzEyMDs=&#xA;"/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Relatorios Credinova"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="YXJxdWl2b19kZXNsaXphbnRlLmNhaXhhICwxNSwxNSw4YmUxZDE3NC1iNzg5LTQ1MTItOTk0MC04&#xA;MTFkODZiY2RiZjA7&#xA;"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexao_relatorio_bd"/>
 	<parameter name="inicio" class="java.lang.String"/>
 	<parameter name="fim" class="java.lang.String"/>
 	<queryString language="SQL">
@@ -13,7 +13,8 @@
 	arquivo_deslizante.caixa.andar,
 	arquivo_deslizante.caixa.apartamento
 FROM arquivo_deslizante.caixa
-WHERE id_caixa BETWEEN $P{inicio} and $P{fim}]]>
+WHERE 
+	 arquivo_deslizante.caixa.id_caixa BETWEEN $P{inicio} AND $P{fim}]]>
 	</queryString>
 	<field name="id_caixa" class="java.lang.Integer">
 		<property name="com.jaspersoft.studio.field.label" value="id_caixa"/>

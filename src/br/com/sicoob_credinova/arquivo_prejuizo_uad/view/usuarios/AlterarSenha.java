@@ -20,7 +20,7 @@ public class AlterarSenha extends javax.swing.JInternalFrame {
      * @param usuarioLogado o usuário logado no sistema
      */
     public AlterarSenha(UsuarioArquivo usuarioLogado) {
-        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\faviconP.png"));
+        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\arquivo.png"));
         initComponents();
         this.usuarioLogado = usuarioLogado;
         this.controle = new UsuarioController();

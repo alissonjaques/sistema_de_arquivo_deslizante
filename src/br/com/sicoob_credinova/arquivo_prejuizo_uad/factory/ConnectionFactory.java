@@ -15,7 +15,7 @@ public class ConnectionFactory {
             String url = "jdbc:mysql://localhost:/arquivo_deslizante";
             String user = "root";
             //String password = "hertz@1636";
-            String password = "mundo";
+            String password = "123456";
             try {
                 con = DriverManager.getConnection(url, user, password);
             } catch (SQLException e) {

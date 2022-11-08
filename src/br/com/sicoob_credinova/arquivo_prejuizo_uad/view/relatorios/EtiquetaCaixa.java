@@ -20,7 +20,7 @@ public class EtiquetaCaixa extends javax.swing.JInternalFrame {
      * Creates new form EtiquetaCaixa
      */
     public EtiquetaCaixa() {
-        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\faviconP.png"));
+        this.setFrameIcon(new ImageIcon("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\arquivo.png"));
         initComponents();
     }
 

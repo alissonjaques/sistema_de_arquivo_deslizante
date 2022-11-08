@@ -43,7 +43,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
      * @throws javax.swing.UnsupportedLookAndFeelException
      */
     public TelaPrincipal() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
-        this.setIconImage(Toolkit.getDefaultToolkit().getImage("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\faviconP.png"));
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\arquivo.png"));
         initComponents();
         usuarioLogado = new UsuarioArquivo();
         centralizarLogo(jlLogo);
@@ -90,7 +90,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jdpPrincipal.setPreferredSize(new java.awt.Dimension(856, 751));
 
         jlLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sicoob_credinova/arquivo_prejuizo_uad/img/credinova.jpg"))); // NOI18N
+        jlLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sicoob_credinova/arquivo_prejuizo_uad/img/arquivo deslizante.jpg"))); // NOI18N
         jlLogo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jdpPrincipal.add(jlLogo);
         jlLogo.setBounds(0, 0, 1640, 980);
@@ -130,7 +130,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jmCadastrarDocumentos.setBackground(new java.awt.Color(51, 51, 51));
         jmCadastrarDocumentos.setForeground(new java.awt.Color(255, 255, 255));
-        jmCadastrarDocumentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sicoob_credinova/arquivo_prejuizo_uad/img/arquivo.png"))); // NOI18N
+        jmCadastrarDocumentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sicoob_credinova/arquivo_prejuizo_uad/img/archive32.png"))); // NOI18N
         jmCadastrarDocumentos.setText("Cadastrar Documentos");
         jmCadastrarDocumentos.setEnabled(false);
         jmCadastrarDocumentos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

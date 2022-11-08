@@ -62,7 +62,9 @@ public class TelaDeLogin extends javax.swing.JDialog { // declaração da classe
         setTitle("Tela de Login");
 
         lTitulo.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
-        lTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sicoob_credinova/arquivo_prejuizo_uad/img/logo credinova.png"))); // NOI18N
+        lTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sicoob_credinova/arquivo_prejuizo_uad/img/arquivoDeslizanteLogo.png"))); // NOI18N
+        lTitulo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         lUsuario.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         lUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sicoob_credinova/arquivo_prejuizo_uad/img/user32.png"))); // NOI18N
@@ -128,11 +130,11 @@ public class TelaDeLogin extends javax.swing.JDialog { // declaração da classe
                 .addGroup(pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lSenha)
                     .addComponent(pfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnConfirmar)
                     .addComponent(btnCancelar))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,7 +145,7 @@ public class TelaDeLogin extends javax.swing.JDialog { // declaração da classe
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

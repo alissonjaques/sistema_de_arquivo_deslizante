@@ -23,7 +23,7 @@ public class EditarNovoUsuario extends javax.swing.JFrame {
      * @param usuario o usuário para alteração
      */
     public EditarNovoUsuario(UsuarioArquivo usuario) {
-        this.setIconImage(Toolkit.getDefaultToolkit().getImage("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\faviconP.png"));
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage("src\\br\\com\\sicoob_credinova\\arquivo_prejuizo_uad\\img\\arquivo.png"));
         initComponents();
         this.usuario = usuario;
         preencherCampos();
