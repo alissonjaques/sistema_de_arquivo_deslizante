@@ -1,6 +1,7 @@
 CREATE SCHEMA arquivo_deslizante;
+USE arquivo_deslizante;
+
 CREATE TABLE `caixa` (
-import React from 'react';function ListaDeRepositorios() {  return (   <ul>    <li>Curso da Alura - HTML e CSS</li>    <li>Curso da Alura - React</li>    <li>Curso da Alura - Manipulando DOM com JS</li>   </ul>  );}export default ListaDeRepositorios;
   `id_caixa` int(11) NOT NULL,
   `rua` int(11) NOT NULL,
   `avenida` int(11) NOT NULL,
@@ -8,7 +9,7 @@ import React from 'react';function ListaDeRepositorios() {  return (   <ul>    <
   `andar` int(11) NOT NULL,
   `apartamento` int(11) NOT NULL,
   PRIMARY KEY (`id_caixa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `documento` (
   `id_documento` int(11) NOT NULL AUTO_INCREMENT,
@@ -26,7 +27,7 @@ CREATE TABLE `documento` (
   CONSTRAINT `id_caixa` FOREIGN KEY (`id_caixa`) REFERENCES `caixa` (`id_caixa`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `id_nome_dos_campos` FOREIGN KEY (`id_nome_dos_campos`) REFERENCES `nome_dos_campos` (`id_nome_dos_campos`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `id_valores_dos_campos` FOREIGN KEY (`id_valores_dos_campos`) REFERENCES `valores_dos_campos` (`id_valores_dos_campos`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `nome_dos_campos` (
   `id_nome_dos_campos` int(11) NOT NULL AUTO_INCREMENT,
@@ -40,7 +41,7 @@ CREATE TABLE `nome_dos_campos` (
   `nome6` varchar(450) NOT NULL DEFAULT 'Informação Complementar 6',
   `nome7` varchar(450) NOT NULL DEFAULT 'Informação Complementar 7',
   PRIMARY KEY (`id_nome_dos_campos`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
@@ -50,7 +51,7 @@ CREATE TABLE `usuario` (
   `senha` varchar(45) NOT NULL,
   `perfil` varchar(45) NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `valores_dos_campos` (
   `id_valores_dos_campos` int(11) NOT NULL AUTO_INCREMENT,
@@ -62,7 +63,7 @@ CREATE TABLE `valores_dos_campos` (
   `valor6` varchar(450) NOT NULL,
   `valor7` varchar(450) NOT NULL,
   PRIMARY KEY (`id_valores_dos_campos`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4;
 
 CREATE DEFINER=`root`@`%` PROCEDURE `consulta_documentos_pr`(tipo_documental varchar(450), valor int, conteudo varchar(450))
 BEGIN
