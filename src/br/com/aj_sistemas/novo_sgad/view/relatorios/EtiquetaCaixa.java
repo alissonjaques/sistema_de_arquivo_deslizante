@@ -4,8 +4,6 @@ import br.com.aj_sistemas.novo_sgad.dao.RelatorioDAO;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import net.sf.jasperreports.engine.JRException;
@@ -39,6 +37,8 @@ public class EtiquetaCaixa extends javax.swing.JInternalFrame {
         jlCaixaFinal = new javax.swing.JLabel();
         jtfCaixaFinal = new javax.swing.JTextField();
         jbGerarEtiquetas = new javax.swing.JButton();
+        jlNomeEmpresa = new javax.swing.JLabel();
+        jtfNomeEmpresa = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(72, 61, 139));
         setClosable(true);
@@ -64,34 +64,50 @@ public class EtiquetaCaixa extends javax.swing.JInternalFrame {
             }
         });
 
+        jlNomeEmpresa.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jlNomeEmpresa.setText("Nome da Empresa:");
+
+        jtfNomeEmpresa.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jlCaixaInicial)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jtfCaixaInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jlCaixaFinal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jtfCaixaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(jbGerarEtiquetas)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlNomeEmpresa)
+                    .addComponent(jlCaixaInicial))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jtfCaixaInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jlCaixaFinal)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jtfCaixaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbGerarEtiquetas))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jtfNomeEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 1, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlNomeEmpresa)
+                    .addComponent(jtfNomeEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlCaixaInicial)
                     .addComponent(jtfCaixaInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jlCaixaFinal)
                     .addComponent(jtfCaixaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbGerarEtiquetas))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -107,34 +123,43 @@ public class EtiquetaCaixa extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    private void acaoGerarEtiquetas(){
-        try{
-            int caixaInicial = Integer.parseInt(getJtfCaixaInicial().getText());
-            int caixaFinal = Integer.parseInt(getJtfCaixaFinal().getText());
-            
-            List<String> parametros = new ArrayList();
-            List<String> valores = new ArrayList();
-            parametros.add("inicio");
-            parametros.add("fim");
-            valores.add(String.valueOf(caixaInicial));
-            valores.add(String.valueOf(caixaFinal));
+
+    private void acaoGerarEtiquetas() {
+        if (getJtfNomeEmpresa().getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Informe o nome da empresa!", "Alerta", 2);
+        } else if (getJtfNomeEmpresa().getText().length() < 3) {
+            JOptionPane.showMessageDialog(this, "O nome da empresa dever "
+                    + "possuir no mínimo 3 caracteres!", "Alerta", 2);
+        } else {
             try {
-                RelatorioDAO.gerarRelatorio("etiquetaCaixas", parametros, valores);
-            } catch (IOException | JRException ex) {
-                JOptionPane.showMessageDialog(this, "Erro ao gerar relatório! Erro: " + ex.getMessage(), "Alerta", 2);
+                int caixaInicial = Integer.parseInt(getJtfCaixaInicial().getText());
+                int caixaFinal = Integer.parseInt(getJtfCaixaFinal().getText());
+
+                List<String> parametros = new ArrayList();
+                List<String> valores = new ArrayList();
+                parametros.add("inicio");
+                parametros.add("fim");
+                parametros.add("nomeDaEmpresa");
+                valores.add(String.valueOf(caixaInicial));
+                valores.add(String.valueOf(caixaFinal));
+                valores.add(getJtfNomeEmpresa().getText());
+                try {
+                    RelatorioDAO.gerarRelatorio("etiquetaCaixas", parametros, valores);
+                } catch (IOException | JRException ex) {
+                    JOptionPane.showMessageDialog(this, "Erro ao gerar relatório! Erro: " + ex.getMessage(), "Alerta", 2);
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, "Número da caixa inválido, forneça um número inteiro válido! Erro: " + e.getMessage(), "Alerta", 2);
             }
-        } catch(NumberFormatException e){
-            JOptionPane.showMessageDialog(this, "Número da caixa inválido, forneça um número inteiro válido! Erro: " + e.getMessage(), "Alerta", 2);
         }
     }
-    
+
     private void jbGerarEtiquetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGerarEtiquetasActionPerformed
         acaoGerarEtiquetas();
     }//GEN-LAST:event_jbGerarEtiquetasActionPerformed
@@ -145,9 +170,25 @@ public class EtiquetaCaixa extends javax.swing.JInternalFrame {
     private javax.swing.JButton jbGerarEtiquetas;
     private javax.swing.JLabel jlCaixaFinal;
     private javax.swing.JLabel jlCaixaInicial;
+    private javax.swing.JLabel jlNomeEmpresa;
     private javax.swing.JTextField jtfCaixaFinal;
     private javax.swing.JTextField jtfCaixaInicial;
+    private javax.swing.JTextField jtfNomeEmpresa;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the jlNomeEmpresa
+     */
+    public javax.swing.JLabel getJlNomeEmpresa() {
+        return jlNomeEmpresa;
+    }
+
+    /**
+     * @param jlNomeEmpresa the jlNomeEmpresa to set
+     */
+    public void setJlNomeEmpresa(javax.swing.JLabel jlNomeEmpresa) {
+        this.jlNomeEmpresa = jlNomeEmpresa;
+    }
 
     /**
      * @return the jPanel1
@@ -231,5 +272,19 @@ public class EtiquetaCaixa extends javax.swing.JInternalFrame {
      */
     public void setJtfCaixaInicial(javax.swing.JTextField jtfCaixaInicial) {
         this.jtfCaixaInicial = jtfCaixaInicial;
+    }
+
+    /**
+     * @return the jtfNomeEmpresa
+     */
+    public javax.swing.JTextField getJtfNomeEmpresa() {
+        return jtfNomeEmpresa;
+    }
+
+    /**
+     * @param jtfNomeEmpresa the jtfNomeEmpresa to set
+     */
+    public void setJtfNomeEmpresa(javax.swing.JTextField jtfNomeEmpresa) {
+        this.jtfNomeEmpresa = jtfNomeEmpresa;
     }
 }
