@@ -24,5 +24,5 @@ Principais tecnologias utilizadas:
 
 # Para fazer a aplicação funcionar:
 
-Rode todos os script contidos na pasta dump no SGBD MySQL. Crie um usuário default para acessar o sistema. Configure a classe de conexão de acordo com as credenciais
+Rode todos os scripts contidos na pasta dump em um SGBD MySQL. Crie um usuário default para acessar o sistema. Configure a classe de conexão de acordo com as credenciais
 de conexão do seu banco de dados.
