@@ -11,10 +11,8 @@ public class ConnectionFactory {
     public ConnectionFactory() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            //String url = "jdbc:mysql://192.168.0.234:/credinova_arquivo_prejuizo";
             String url = "jdbc:mysql://localhost:/arquivo_deslizante";
             String user = "root";
-            //String password = "hertz@1636";
             String password = "mundo";
             try {
                 con = DriverManager.getConnection(url, user, password);
