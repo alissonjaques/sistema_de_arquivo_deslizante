@@ -18,7 +18,7 @@ Principais tecnologias utilizadas:
 
 • JDBC;
 
-• API do Jaspersoft Studio;
+• Jaspersoft Studio;
 
 • Padrões de projeto MVC e DAO;
 
