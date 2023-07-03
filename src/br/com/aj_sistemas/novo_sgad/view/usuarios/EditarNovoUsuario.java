@@ -83,7 +83,7 @@ public class EditarNovoUsuario extends javax.swing.JFrame {
         jtfNome.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
 
         jlUsuario.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jlUsuario.setText("Login Sisbr:");
+        jlUsuario.setText("Login:");
 
         jftUsuario.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
 
