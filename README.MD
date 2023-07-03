@@ -1,4 +1,12 @@
-# Sistema de Gerência de Documentos para Arquivos Deslizantes #
+
+
+
+# Para fazer a aplicação funcionar:
+
+Rode todos os scripts contidos na pasta dump em um SGBD MySQL. Crie um usuário default para acessar o sistema. Configure a classe de conexão de acordo com as credenciais
+de conexão do seu banco de dados.
+
+# Novo SGAD (Sistema de Gerência para Arquivos Deslizantes)
 
 Este projeto representa um sistema que gerencia documentos para arquivos deslizantes. Principais funcionaidades do sistema:
 
@@ -22,7 +30,28 @@ Principais tecnologias utilizadas:
 
 • Padrões de projeto MVC e DAO;
 
-# Para fazer a aplicação funcionar:
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **Novo SGAD**
+| :label: Tecnologias | Java, Jasper Reports, SQL com MySQL, Java Swing
 
-Rode todos os scripts contidos na pasta dump em um SGBD MySQL. Crie um usuário default para acessar o sistema. Configure a classe de conexão de acordo com as credenciais
-de conexão do seu banco de dados.
+<!-- Inserir imagem com a #vitrinedev ao final do link -->
+![alt text](https://github.com/alissonjaques/imagens_aplicacoes/arquivo-deslizante/principal.png#vitrinedev)
+
+## Scripts Disponíveis
+
+No diretório do projeto, você pode executar:
+
+### `npm start`
+
+Executa o aplicativo no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu navegador.
+
+A página será recarregada quando você fizer alterações.\
+Você também pode ver erros de lint no console.
+
+### `npm test`
+
+Inicia o executor de teste no modo de observação interativo.\
+Consulte a seção sobre [execução de testes](https://facebook.github.io/create-react-app/docs/running-tests) para obter mais informações.
+
