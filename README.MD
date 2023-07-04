@@ -8,24 +8,12 @@ Este projeto representa um sistema que gerencia documentos para arquivos desliza
 
 • Cadastro e gerência de documentos;
 
-• Impressão de etiquetas para caixas do arquivo;
-
-• Log de todos os eventos da aplicação;
-
-## Principais tecnologias utilizadas:
-
-• Java 11;
-
-• JDBC;
-
-• Jaspersoft Studio;
-
-• Padrões de projeto MVC e DAO;
+• Impressão de etiquetas para caixas do arquivo.
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
 | :sparkles: Nome        | **Novo SGAD**
-| :label: Tecnologias | Java, Jasper Reports, SQL com MySQL, Java Swing
+| :label: Tecnologias | Java, Jasper Reports, SQL com MySQL, JDBC, Java Swing, Padrões de projeto MVC e DAO
 
 ## Imagens da aplicação funcionando:
 
