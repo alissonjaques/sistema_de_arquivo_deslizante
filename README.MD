@@ -19,8 +19,8 @@ Este projeto representa um sistema que gerencia documentos para arquivos desliza
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
 ![alt text](https://github.com/alissonjaques/imagens-aplicacoes/blob/main/arquivo-deslizante/home.PNG#vitrinedev)
-![alt text](https://github.com/alissonjaques/imagens-aplicacoes/blob/main/arquivo-deslizante/login.png#vitrinedev)
-![alt text](https://github.com/alissonjaques/imagens-aplicacoes/blob/main/arquivo-deslizante/arquivamento.png#vitrinedev)
+![alt text](https://github.com/alissonjaques/imagens-aplicacoes/blob/main/arquivo-deslizante/login.png)
+![alt text](https://github.com/alissonjaques/imagens-aplicacoes/blob/main/arquivo-deslizante/arquivamento.png)
 
 ## Para fazer a aplicação funcionar:
 
