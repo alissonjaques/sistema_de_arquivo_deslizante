@@ -30,7 +30,7 @@ Principais tecnologias utilizadas:
 # Imagens da aplicação funcionando:
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![alt text](https://github.com/alissonjaques/imagens-aplicacoes/blob/main/arquivo-deslizante/principal.PNG#vitrinedev)
+![alt text](https://github.com/alissonjaques/imagens-aplicacoes/blob/main/arquivo-deslizante/principal.png#vitrinedev)
 ![alt text](https://github.com/alissonjaques/imagens-aplicacoes/blob/main/arquivo-deslizante/login.png#vitrinedev)
 ![alt text](https://github.com/alissonjaques/imagens-aplicacoes/blob/main/arquivo-deslizante/arquivamento.png#vitrinedev)
 
