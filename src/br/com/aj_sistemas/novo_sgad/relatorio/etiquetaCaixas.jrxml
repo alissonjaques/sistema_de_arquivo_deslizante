@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="etiquetaCaixas" columnCount="2" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="277" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="aba1c95a-7b4a-4d8b-a4c4-deafce7162e4">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Relatorios"/>
+	<parameter name="inicio" class="java.lang.String"/>
+	<parameter name="fim" class="java.lang.String"/>
+	<parameter name="nomeDaEmpresa" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT arquivo_deslizante.caixa.id_caixa,
+	arquivo_deslizante.caixa.rua,
+	arquivo_deslizante.caixa.avenida,
+	arquivo_deslizante.caixa.predio,
+	arquivo_deslizante.caixa.andar,
+	arquivo_deslizante.caixa.apartamento
+FROM arquivo_deslizante.caixa
+WHERE 
+	 arquivo_deslizante.caixa.id_caixa BETWEEN $P{inicio} AND $P{fim}]]>
+	</queryString>
+	<field name="id_caixa" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id_caixa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="caixa"/>
+	</field>
+	<field name="rua" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="rua"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="caixa"/>
+	</field>
+	<field name="avenida" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="avenida"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="caixa"/>
+	</field>
+	<field name="predio" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="predio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="caixa"/>
+	</field>
+	<field name="andar" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="andar"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="caixa"/>
+	</field>
+	<field name="apartamento" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="apartamento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="caixa"/>
+	</field>
+	<group name="id_caixa">
+		<groupExpression><![CDATA[$F{id_caixa}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="90" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="30" width="270" height="30" uuid="3e498efa-9af3-4032-bcca-ede50b0b89f3"/>
+				<box>
+					<leftPen lineWidth="1.0" lineStyle="Dotted"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Rua: " + $F{rua} + " Av: " + $F{avenida} + " Pred: " + $F{predio} + " Andar: " + $F{andar} +" Apto: " + $F{apartamento}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="60" width="270" height="30" uuid="2c18a438-0c3c-4b8a-b177-b366c78c5c16"/>
+				<box>
+					<leftPen lineWidth="1.0" lineStyle="Dotted"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Identificação:  " + $F{id_caixa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="0" width="270" height="30" uuid="e3307ed2-872e-4f3a-9fbf-3846a2b0eee3"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Dotted"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomeDaEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
