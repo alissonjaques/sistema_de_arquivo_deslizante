@@ -2,6 +2,7 @@ package br.com.aj_sistemas.novo_sgad.dao;
 
 import br.com.aj_sistemas.novo_sgad.enums.Perfil;
 import br.com.aj_sistemas.novo_sgad.model.UsuarioArquivo;
+import br.com.aj_sistemas.novo_sgad.utils.BibliotecaDeMetodos;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,7 +30,7 @@ public class UsuarioArquivoDAO {
                 pstm.setString(1, usuario.getNome());
                 pstm.setString(2, usuario.getNomeDeUsuario());
                 pstm.setString(3, usuario.getCpf());
-                pstm.setString(4, usuario.getSenha());
+                pstm.setString(4, BibliotecaDeMetodos.gerarHash(usuario.getSenha()));
                 pstm.setString(5, usuario.getPerfil().toString());
                 pstm.execute();
             }
@@ -47,7 +48,7 @@ public class UsuarioArquivoDAO {
                 pstm.setString(1, usuario.getNome());
                 pstm.setString(2, usuario.getNomeDeUsuario());
                 pstm.setString(3, usuario.getCpf());
-                pstm.setString(4, usuario.getSenha());
+                pstm.setString(4, BibliotecaDeMetodos.gerarHash(usuario.getSenha()));
                 pstm.setString(5, usuario.getPerfil().toString());
                 pstm.setString(6, usuario.getCpf());
                 pstm.execute();

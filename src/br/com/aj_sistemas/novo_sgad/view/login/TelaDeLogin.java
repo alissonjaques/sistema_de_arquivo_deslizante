@@ -5,6 +5,7 @@ import br.com.aj_sistemas.novo_sgad.model.UsuarioArquivo;
 import br.com.aj_sistemas.novo_sgad.utils.BibliotecaArquivoDeslizante;
 import br.com.aj_sistemas.novo_sgad.view.principal.TelaPrincipal;
 import javax.swing.JOptionPane;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  * A classe TelaDeLogin representa uma tela de login que permite que o usuï¿½rio
@@ -159,7 +160,7 @@ public class TelaDeLogin extends javax.swing.JDialog { // declaraï¿½ï¿½o da clas
         UsuarioArquivo usuario = controle.consultarPorNome(nome);
         if (usuario == null) {
             JOptionPane.showMessageDialog(this, "Nome de usuário inválido!", "Erro ao Logar no sistema", JOptionPane.INFORMATION_MESSAGE);
-        } else if (usuario.getSenha().equals(senha)) {
+        } else if (BCrypt.checkpw(senha, usuario.getSenha())) {
             getTp().getJmCadastrarDocumentos().setEnabled(true);
             getTp().getJmConfiguracao().setEnabled(true);
             getTp().getJmConsultas().setEnabled(true);

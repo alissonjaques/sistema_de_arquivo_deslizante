@@ -4,6 +4,7 @@ import br.com.aj_sistemas.novo_sgad.controller.UsuarioController;
 import br.com.aj_sistemas.novo_sgad.model.UsuarioArquivo;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  *
@@ -64,11 +65,6 @@ public class AlterarSenha extends javax.swing.JInternalFrame {
         jbAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbAlterarActionPerformed(evt);
-            }
-        });
-        jbAlterar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jbAlterarKeyPressed(evt);
             }
         });
 
@@ -140,6 +136,10 @@ public class AlterarSenha extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAlterarActionPerformed
+        acaoAlterarSenha();
+    }//GEN-LAST:event_jbAlterarActionPerformed
+
     /**
      * Verifica se existe campos vazios no formulário da tela.
      *
@@ -155,7 +155,7 @@ public class AlterarSenha extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Existem campos vazios, preencha "
                     + "todos os campos para continuar", "Alerta", 2);
         } else {
-            if (getJtfSenhaAtual().getText().equals(getUsuarioLogado().getSenha())) {
+            if (BCrypt.checkpw(getJtfSenhaAtual().getText(), getUsuarioLogado().getSenha())) {
                 if (getJtfNovaSenha().getText().equals(getJtfRepetirNovaSenha().getText())) {
                     getUsuarioLogado().setSenha(getJtfNovaSenha().getText());
                     getControle().editar(getUsuarioLogado());
@@ -169,14 +169,6 @@ public class AlterarSenha extends javax.swing.JInternalFrame {
             }
         }
     }
-
-    private void jbAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAlterarActionPerformed
-        acaoAlterarSenha();
-    }//GEN-LAST:event_jbAlterarActionPerformed
-
-    private void jbAlterarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jbAlterarKeyPressed
-        acaoAlterarSenha();
-    }//GEN-LAST:event_jbAlterarKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -48,7 +48,7 @@ CREATE TABLE `usuario` (
   `nome` varchar(450) NOT NULL,
   `nome_de_usuario` varchar(450) NOT NULL,
   `cpf` varchar(45) NOT NULL,
-  `senha` varchar(45) NOT NULL,
+  `senha` varchar(100) NOT NULL,
   `perfil` varchar(45) NOT NULL,
   PRIMARY KEY (`id_usuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;

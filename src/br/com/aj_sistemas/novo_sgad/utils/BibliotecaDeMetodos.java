@@ -22,6 +22,7 @@ import java.util.Random;
 import java.util.regex.Pattern;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  * Esta classe fornece diversos métodos estáticos para as mais variadas
@@ -30,6 +31,11 @@ import javax.swing.text.MaskFormatter;
  * @author Alisson Jaques
  */
 public class BibliotecaDeMetodos { // declara a classe
+    
+    public static String gerarHash(String senha){
+        String senhaCriptografa = BCrypt.hashpw(senha, BCrypt.gensalt());
+        return senhaCriptografa;
+    }
     
     /**
      * Recebe como argumento uma data, no formatodo yyyy-MM-dd e retorna uma data
