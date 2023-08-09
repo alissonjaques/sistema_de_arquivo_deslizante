@@ -15,6 +15,8 @@ Este projeto representa um sistema que gerencia documentos para arquivos desliza
 | :sparkles: Nome        | **Novo SGAD**
 | :label: Tecnologias | Java, Jasper Reports, SQL com MySQL, JDBC, Java Swing, Padrões de projeto MVC e DAO
 
+##
+
 ## Imagens da aplicação funcionando:
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
